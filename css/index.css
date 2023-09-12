@@ -1,0 +1,235 @@
+:root
+{
+    --infoColor:#0dcaf0;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body::-webkit-scrollbar
+{
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb
+{
+    background-color: var(--infoColor);
+}
+
+.full-height{height: 100vh;}
+
+
+.soon-popHover{
+
+}
+
+
+/**/
+.intro{
+    width: 100%;
+    height: 450px;
+}
+.intro p{
+    width: 80%;
+    height: fit-content;
+}
+
+
+/**/
+.mentality-ident-ar{
+    cursor: pointer;
+    position: relative;
+}
+.mentality-ident-ar::before{
+    content: "منتاليتي هي منصة لتعليم البرمجة للكبار";
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
+
+    width: 200%;
+    height: fit-content;
+    background-color: gray;
+    color: white;
+    
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    border-radius: 10px;
+
+    z-index: 1;
+    display: none;
+
+    transition: .2s;
+}
+.mentality-ident-ar:hover::before{
+    display: block;
+}
+
+
+
+
+.mentality-ident-en{
+    cursor: pointer;
+    position: relative;
+}
+.mentality-ident-en::before{
+    content: "Mentality is a platform to teach programming for Adults";
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
+
+    width: 200%;
+    height: fit-content;
+    background-color: gray;
+    color: white;
+    
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    border-radius: 10px;
+
+    z-index: 1;
+    display: none;
+
+    transition: .2s;
+}
+.mentality-ident-en:hover::before{
+    display: block;
+}
+
+
+/**/
+.fab{transition: .2s;}
+.fab:hover
+{
+    color: white;
+}
+
+
+/**/
+
+
+.team-cards{
+    flex-wrap: wrap;
+}
+
+
+
+.team-badges{
+    display: none;
+}
+
+
+
+
+/**/
+.swipper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
+.slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 25px;
+}
+.image-content , .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.overlay{
+    position: absolute;
+    left: 0;top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--infoColor);
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before , .overlay::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: var(--infoColor);
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+}
+.card{
+    border-radius: 25px;
+    background-color: #fff;
+}
+.card-image{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+.card-image .card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%;
+    border: 4px solid var(--infoColor);
+}
+.name{
+    font-size: 18px;
+    font-weight: 500px;
+    color: #333;
+}
+.description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+
+@media (max-width:800px) 
+{
+    .team-cards{
+        display: none;
+    }   
+    .team-badges{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+@media (max-width:500px) 
+{
+    .team-cards{
+        display: none;
+    }   
+    .team-badges{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

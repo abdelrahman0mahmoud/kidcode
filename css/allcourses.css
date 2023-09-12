@@ -1,0 +1,49 @@
+:root{}
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar{}
+body::-webkit-scrollbar-thumb{}
+/**/
+
+.screen{
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.backToHome{
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    
+}
+.courses-container{
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    
+}
+
+.courses{
+    width: 100%;
+}
+.course{
+    width: 300px;
+    height: 300px;
+
+    border-radius: 10px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width:500px) {
+    
+}
